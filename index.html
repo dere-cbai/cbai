@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberBrain AI - African AI Solutions</title>
+    <style>
+        :root {
+            --primary-green: #078930;
+            --primary-blue: #0066cc;
+            --accent-yellow: #fcd116;
+            --accent-red: #de071c;
+            --dark-bg: #1e1e1e;
+            --card-hover: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                var(--dark-bg) 0%,
+                #2a2a2a 100%
+            );
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffffff, var(--accent-yellow));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: var(--accent-yellow);
+        }
+
+        .project-card p {
+            color: #cccccc;
+            margin-bottom: 20px;
+        }
+
+        .project-card .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        .logo {
+            width: 250px;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Add these new styles */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-container h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .nav-bar {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-yellow);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-bar {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="assets/logo.svg" alt="CyberBrain AI Logo" class="logo">
+                <!-- <h2>CyberBrain <sup>AI</sup></h2> -->
+            </div>
+            <nav class="nav-bar">
+                <a href="/products" class="nav-link">Products</a>
+                <a href="/research" class="nav-link">Research</a>
+                <a href="/company" class="nav-link">Company</a>
+                <a href="/careers" class="nav-link">Careers</a>
+                <a href="/news" class="nav-link">News</a>
+                <a href="/team" class="nav-link">Team</a>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <p>Empowering Africa through innovative AI solutions. We're building the future of artificial intelligence with a focus on African languages, culture, and needs.</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h2>CSGEth</h2>
+                <p>Advanced Computer Science education platform tailored for Ethiopian students. Learn programming, algorithms, and software development in Amharic.</p>
+                <div class="tags">
+                    <span class="tag">Education</span>
+                    <span class="tag">Programming</span>
+                    <span class="tag">Amharic</span>
+                </div>
+                <a href="http://csgeth.cyberbrainai.com" class="cta-button">Explore CSGEth</a>
+            </div>
+
+            <div class="project-card">
+                <h2>ድinቅneሽ AI</h2>
+                <p>The most capable Amharic (አማርኛ) multi-modal model. Process text, images, audio, and video in Amharic with state-of-the-art AI technology.</p>
+                <div class="tags">
+                    <span class="tag">Multi-modal AI</span>
+                    <span class="tag">Amharic</span>
+                    <span class="tag">Natural Language</span>
+                </div>
+                <a href="https://dinkinesh.cyberbrainai.com" class="cta-button">Try ድinቅneሽ AI</a>
+            </div>
+
+            <div class="project-card">
+                <h2>HakimAI</h2>
+                <p>AI-powered healthcare assistant providing medical information and preliminary diagnostics in Ethiopian languages.</p>
+                <div class="tags">
+                    <span class="tag">Healthcare</span>
+                    <span class="tag">AI Assistant</span>
+                    <span class="tag">Multi-lingual</span>
+                </div>
+                <a href="http://hakimai.cyberbrainai.com" class="cta-button">Access HakimAI</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

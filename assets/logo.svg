@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Shield Base -->
+  <defs>
+    <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#32CD32;stop-opacity:0.95" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shield Shape -->
+  <path d="M200 50 
+           L350 100
+           Q370 250 200 350
+           Q30 250 50 100 Z" 
+        fill="url(#circuitGradient)"
+        stroke="#4A4A4A"
+        stroke-width="3"/>
+
+  <!-- Connection Lines -->
+  <!-- Shield Corner Connections (subtle background) -->
+  <g stroke="#4A4A4A" stroke-width="1" opacity="0.3">
+    <path d="M50 100 L145 120" />
+    <path d="M50 100 L125 150" />
+    <path d="M350 100 L300 185" />
+    <path d="M350 100 L268 185" />
+    <path d="M50 100 L185 110" />
+    <path d="M350 100 L238 140" />
+  </g>
+
+  <!-- Africa Outline Pattern (primary connections) -->
+  <g stroke="#000080" stroke-width="2" opacity="0.8">
+    <!-- Northern Border -->
+    <path d="M145 120 L185 110" />
+    <path d="M185 110 L212 125" />
+    <path d="M212 125 L238 140" />
+    <path d="M238 140 L252 160" />
+    <path d="M252 160 L268 185" />
+    
+    <!-- Eastern Border -->
+    <path d="M268 185 L300 185" />
+    <path d="M300 185 L290 198" />
+    <path d="M290 198 L268 215" />
+    <path d="M268 215 L272 235" />
+    <path d="M272 235 L258 250" />
+    <path d="M258 250 L248 275" />
+    
+    <!-- Western Border -->
+    <path d="M145 120 L125 150" />
+    <path d="M125 150 L135 190" />
+    <path d="M135 190 L185 192" />
+    
+    <!-- Southern Border -->
+    <path d="M185 192 L198 220" />
+    <path d="M198 220 L200 250" />
+    <path d="M200 250 L208 275" />
+    <path d="M208 275 L223 290" />
+    <path d="M223 290 L238 290" />
+    <path d="M238 290 248 275" />
+  </g>
+
+  <!-- Internal Connections (secondary network) -->
+  <g stroke="#0000FF" stroke-width="1.5" opacity="0.4">
+    <path d="M185 192 L212 125" />
+    <path d="M198 220 L268 215" />
+    <path d="M200 250 L258 250" />
+    <path d="M208 275 L248 275" />
+    <path d="M185 192 L252 160" />
+    <path d="M198 220 L272 235" />
+    <path d="M208 275 L238 290" />
+    <path d="M252 160 L290 198" />
+    <path d="M135 190 L198 220" />
+    <path d="M185 192 L268 215" />
+    <path d="M198 220 L258 250" />
+    <path d="M200 250 L248 275" />
+    <path d="M145 120 L185 192" />
+    <path d="M212 125 L268 185" />
+    <path d="M238 140 L290 198" />
+    <path d="M248 160 L290 198" />  
+    <path d="M135 190 L208 275" />
+    <path d="M185 110 L252 160" />
+    <path d="M268 215 L238 290" />
+    <path d="M272 235 L223 290" />
+    <path d="M238 290 248 275" />
+    <path d="M238 290 248 275" />
+  </g>
+
+  <!-- Connection Points -->
+  <g>
+    <circle cx="145" cy="120" r="3" fill="#000080"/>
+    <circle cx="125" cy="150" r="3" fill="#000080"/>
+    <circle cx="185" cy="110" r="3" fill="#000080"/>
+    <circle cx="212" cy="125" r="3" fill="#000080"/>
+    <circle cx="238" cy="140" r="3" fill="#000080"/>
+    <circle cx="252" cy="160" r="3" fill="#000080"/>
+    <circle cx="268" cy="185" r="3" fill="#000080"/>
+    <circle cx="300" cy="185" r="3" fill="#000080"/>
+    <circle cx="290" cy="198" r="3" fill="#000080"/>
+    <circle cx="268" cy="215" r="3" fill="#000080"/>
+    <circle cx="272" cy="235" r="3" fill="#000080"/>
+    <circle cx="258" cy="250" r="3" fill="#000080"/>
+    <circle cx="248" cy="275" r="3" fill="#000080"/> 
+
+    <circle cx="135" cy="190" r="3" fill="#000080"/>
+    <circle cx="185" cy="192" r="3" fill="#000080"/>
+    <circle cx="198" cy="220" r="3" fill="#000080"/>
+    <circle cx="200" cy="250" r="3" fill="#000080"/>
+    <circle cx="208" cy="275" r="3" fill="#000080"/>
+    <circle cx="223" cy="290" r="3" fill="#000080"/>
+    <circle cx="238" cy="290" r="3" fill="#000080"/>
+  </g>
+
+  <!-- Banner -->
+  <path d="M140 315 
+           L260 315 
+           L290 350 
+           L110 350 Z"
+        fill="#0000FF"
+        stroke="#4A4A4A"
+        stroke-width="1"/>
+        
+  <!-- Banner Text -->
+  <text x="200" y="339"
+        font-family="Arial"
+        font-size="20"
+        fill="#FFFF00"
+        text-anchor="middle"
+        font-weight="bold">CyberBrain <tspan baseline-shift="super" font-size="10">AI</tspan></text>
+</svg>
