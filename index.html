@@ -49,7 +49,8 @@
         }
 
         .hero p {
-            font-size: 1.2em;
+            font-size: 1.6em;
+            font-weight: 600;
             color: #cccccc;
             max-width: 800px;
             margin: 0 auto;
@@ -63,6 +64,8 @@
         }
 
         .project-card {
+            position: relative;
+            overflow: hidden;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
             padding: 25px;
@@ -70,10 +73,23 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        .project-preview {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .project-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-preview img {
+            transform: scale(1.05);
         }
 
         .project-card h2 {
@@ -161,7 +177,8 @@
         .nav-link {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1.3em;
+            font-weight: 600;
             padding: 5px 10px;
             transition: all 0.3s ease;
             position: relative;
@@ -194,6 +211,83 @@
                 gap: 15px;
             }
         }
+
+        /* Add these new styles */
+        .nav-dinkinesh {
+            background: linear-gradient(90deg, #8B4513, #DAA520);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .nav-csgeth {
+            background: linear-gradient(90deg, #2E8B57, #3CB371);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .nav-hakim {
+            background: linear-gradient(90deg, #4169E1, #1E90FF);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        /* Add these new styles */
+        .nav-link-products {
+            position: relative;
+        }
+
+        .products-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 200px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-link-products:hover .products-dropdown {
+            display: block;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-link:hover {
+            background: var(--card-hover);
+        }
+
+        /* Add these new styles */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .copyright a {
+            color: var(--accent-yellow);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .copyright a:hover {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -204,7 +298,14 @@
                 <!-- <h2>CyberBrain <sup>AI</sup></h2> -->
             </div>
             <nav class="nav-bar">
-                <a href="/products" class="nav-link">Products</a>
+                <div class="nav-link-products">
+                    <a href="/products" class="nav-link">Products</a>
+                    <div class="products-dropdown">
+                        <a href="https://dinkinesh.cyberbrainai.com" class="dropdown-link nav-dinkinesh">ድinቅneሽ AI</a>
+                        <a href="http://csgeth.cyberbrainai.com" class="dropdown-link nav-csgeth">CSGEth</a>
+                        <a href="http://hakimai.cyberbrainai.com" class="dropdown-link nav-hakim">HakimAI</a>
+                    </div>
+                </div>
                 <a href="/research" class="nav-link">Research</a>
                 <a href="/company" class="nav-link">Company</a>
                 <a href="/careers" class="nav-link">Careers</a>
@@ -214,15 +315,30 @@
         </header>
 
         <div class="hero">
-            <p>Empowering Africa through innovative AI solutions. We're building the future of artificial intelligence with a focus on African languages, culture, and needs.</p>
+            <p>Empowering Africa through innovative AI solutions. We're building the future of artificial intelligence with a huge focus on African needs.</p>
         </div>
-
+        <div class="project-card">
+            <div class="project-preview">
+                <img src="assets/dinkinesh-preview.jpg" alt="ድinቅneሽ AI Preview">
+            </div>
+            <h2>ድinቅneሽ AI</h2>
+            <p>The most capable Amharic (አማርኛ) multi-modal model. Process text, images, audio, and video in Amharic with state-of-the-art AI technology.</p>
+            <div class="tags">
+                <span class="tag nav-dinkinesh">Multi-modal AI</span>
+                <span class="tag">Amharic</span>
+                <span class="tag">Natural Language</span>
+            </div>
+            <a href="https://dinkinesh.cyberbrainai.com" class="cta-button">Try ድinቅneሽ AI</a>
+        </div>
         <div class="projects-grid">
             <div class="project-card">
+                <div class="project-preview">
+                    <img src="assets/csgeth-preview.jpg" alt="CSGEth Preview">
+                </div>
                 <h2>CSGEth</h2>
                 <p>Advanced Computer Science education platform tailored for Ethiopian students. Learn programming, algorithms, and software development in Amharic.</p>
                 <div class="tags">
-                    <span class="tag">Education</span>
+                    <span class="tag nav-csgeth">Education</span>
                     <span class="tag">Programming</span>
                     <span class="tag">Amharic</span>
                 </div>
@@ -230,27 +346,26 @@
             </div>
 
             <div class="project-card">
-                <h2>ድinቅneሽ AI</h2>
-                <p>The most capable Amharic (አማርኛ) multi-modal model. Process text, images, audio, and video in Amharic with state-of-the-art AI technology.</p>
-                <div class="tags">
-                    <span class="tag">Multi-modal AI</span>
-                    <span class="tag">Amharic</span>
-                    <span class="tag">Natural Language</span>
+                <div class="project-preview">
+                    <img src="assets/hakim-preview.jpg" alt="HakimAI Preview">
                 </div>
-                <a href="https://dinkinesh.cyberbrainai.com" class="cta-button">Try ድinቅneሽ AI</a>
-            </div>
-
-            <div class="project-card">
                 <h2>HakimAI</h2>
                 <p>AI-powered healthcare assistant providing medical information and preliminary diagnostics in Ethiopian languages.</p>
                 <div class="tags">
-                    <span class="tag">Healthcare</span>
+                    <span class="tag nav-hakim">Healthcare</span>
                     <span class="tag">AI Assistant</span>
                     <span class="tag">Multi-lingual</span>
                 </div>
                 <a href="http://hakimai.cyberbrainai.com" class="cta-button">Access HakimAI</a>
             </div>
         </div>
+        <footer class="footer">
+            <p class="copyright">
+                © 2024 CyberBrain AI. All rights reserved. 
+                <a href="/privacy">Privacy Policy</a> | 
+                <a href="/terms">Terms of Service</a>
+            </p>
+        </footer>
     </div>
 </body>
 </html>
